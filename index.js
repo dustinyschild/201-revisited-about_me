@@ -1,7 +1,7 @@
 "use strict";
 
 console.log("Hello DeltaV");
-(function startGame() {
+function startGame() {
   var continueGame = confirm("Would you like to play a guessing game about me?");
   if(!continueGame) {
     alert("That's too bad, maybe next time!");
@@ -10,7 +10,7 @@ console.log("Hello DeltaV");
 
   var answerKey = initGameValues();
 
-})();
+};
 
 function initGameValues() {
   const answerKey = [
@@ -46,3 +46,5 @@ function _calculateAge(birthday) { // birthday is a date
   var ageDate = new Date(ageDifMs); // miliseconds from epoch
   return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
+
+window.onload = startGame;
